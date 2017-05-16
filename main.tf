@@ -2,7 +2,7 @@ resource "aws_alb_listener_rule" "rule" {
   count = "${length(var.path_conditions)}"
 
   listener_arn = "${var.alb_listener_arn}"
-  priority     = "${var.priority + count.index}"
+  priority     = "${var.starting_priority + count.index}"
 
   action {
     type             = "forward"

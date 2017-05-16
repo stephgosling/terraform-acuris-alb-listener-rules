@@ -26,9 +26,9 @@ module "listener_rule_home" {
   alb_listener_arn = "arn:aws:elasticloadbalancing:us-east-1:123456789012:listener/app/my-load-balancer/50dc6c495c0c9188/f2f7dc8efc522ab2"
   target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:123456789012:targetgroup/my-targets/73e2d6bc24d8a067"
 
-  path_conditions = ["/home", "/home/*"]
-  host_condition  = "sub.domain.com"
-  priority        = 10
+  path_conditions   = ["/home", "/home/*"]
+  host_condition    = "sub.domain.com"
+  starting_priority = 10
 }
 ```
 
