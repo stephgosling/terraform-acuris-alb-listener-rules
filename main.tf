@@ -19,6 +19,6 @@ resource "aws_alb_listener_rule" "rule" {
 
   condition {
     field  = "path-pattern"
-    values = ["${element(var.path_conditions), count.index)}"]
+    values = ["${element(var.path_conditions, count.index)}"]
   }
 }
